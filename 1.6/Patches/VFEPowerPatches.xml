@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+		<Operation Class="PatchOperationSequence">
+			<operations>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="VPE_AdvancedGeothermalGenerator"]/comps/li[@Class="CompProperties_Power"]/basePowerConsumption</xpath>
+          <value>
+            <basePowerConsumption>-4800</basePowerConsumption>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="VFE_IndustrialChemfuelPoweredGenerator"]/comps/li[@Class="CompProperties_Power"]/basePowerConsumption</xpath>
+          <value>
+            <basePowerConsumption>-2200</basePowerConsumption>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="VFE_IndustrialWoodFiredGenerator"]/comps/li[@Class="CompProperties_Power"]/basePowerConsumption</xpath>
+          <value>
+            <basePowerConsumption>-2200</basePowerConsumption>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="VFE_TidalGenerator"]/comps/li[@Class="CompProperties_Power"]/basePowerConsumption</xpath>
+          <value>
+            <basePowerConsumption>-2400</basePowerConsumption>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ResearchProjectDef[defName="VFE_AdvancedBatteries"]/prerequisites</xpath>
+          <value>
+            <li>MultiAnalyzer</li>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ResearchProjectDef[defName="VFE_AdvancedPowerSources"]/prerequisites</xpath>
+          <value>
+          <prerequisites>
+            <li>MultiAnalyzer</li>
+          </prerequisites>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ResearchProjectDef[defName="VFE_AdvancedPowerSources"]/baseCost</xpath>
+          <value>
+            <baseCost>3500</baseCost>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ResearchProjectDef[defName="VFE_NuclearPower"]/baseCost</xpath>
+          <value>
+            <baseCost>4500</baseCost>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ResearchProjectDef[defName="VFE_NuclearPower"]/prerequisites</xpath>
+          <value>
+          <prerequisites>
+            <li>MultiAnalyzer</li>
+          </prerequisites>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="VPE_NuclearGenerator"]/comps</xpath>
+          <value>
+      <li Class="CompProperties_Explosive">
+        <wickTicks>800</wickTicks>
+        <explosiveRadius>18.9</explosiveRadius>
+        <preExplosionSpawnSingleThingDef>CraterLarge</preExplosionSpawnSingleThingDef>
+        <explosiveDamageType>BombSuper</explosiveDamageType>
+        <explosionEffect>GiantExplosion</explosionEffect>
+        <explosionSound>Explosion_GiantBomb</explosionSound>
+        <chanceToStartFire>0.5</chanceToStartFire>
+        <damageFalloff>true</damageFalloff>
+        <explodeOnKilled>true</explodeOnKilled>
+      </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="VPE_NuclearGenerator"]/placeWorkers</xpath>
+          <value>
+      <li>PlaceWorker_ShowExplosionRadius</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="VPE_NuclearGenerator"]/comps</xpath>
+          <value>
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(100,190,1,0)</glowColor>
+      </li>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="VFE_AdvancedBattery"]/comps/li[@Class="CompProperties_Battery"]/efficiency</xpath>
+          <value>
+            <efficiency>0.85</efficiency>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="VFE_LargeAdvancedBattery"]/comps/li[@Class="CompProperties_Battery"]/efficiency</xpath>
+          <value>
+            <efficiency>0.85</efficiency>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="VFE_AdvancedBattery"]/comps/li[@Class="CompProperties_Battery"]/storedEnergyMax</xpath>
+          <value>
+            <storedEnergyMax>1000</storedEnergyMax>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="VFE_LargeAdvancedBattery"]/comps/li[@Class="CompProperties_Battery"]/storedEnergyMax</xpath>
+          <value>
+            <storedEnergyMax>2400</storedEnergyMax>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="VFE_AdvancedBattery"]/costList/ComponentSpacer</xpath>
+          <value>
+            <ComponentSpacer>2</ComponentSpacer>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="VFE_LargeAdvancedBattery"]/costList/ComponentSpacer</xpath>
+          <value>
+            <ComponentSpacer>4</ComponentSpacer>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="VFE_AdvancedBattery"]/statBases/MaxHitPoints</xpath>
+          <value>
+            <MaxHitPoints>150</MaxHitPoints>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="VFE_LargeAdvancedBattery"]/statBases/MaxHitPoints</xpath>
+          <value>
+            <MaxHitPoints>270</MaxHitPoints>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="VFE_LargeAdvancedBattery"]/comps/li[@Class="CompProperties_Glower"]/glowRadius</xpath>
+          <value>
+            <glowRadius>7</glowRadius>
+          </value>
+        </li>
+			</operations>
+	</Operation>
+</Patch>

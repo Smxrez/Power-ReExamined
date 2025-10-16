@@ -1,0 +1,19 @@
+<ModMetaData>
+	<packageId>Smxrez.PowerRE</packageId>
+	<name>Power: Re-Examined</name>
+	<author>Smxrez</author>
+	<supportedVersions>
+		<li>1.6</li>
+	</supportedVersions>
+	<modDependencies>
+	<li>
+		<packageId>vanillaexpanded.vfepower</packageId>
+		<displayName>Vanilla Furniture Expanded - Power</displayName>
+		<steamWorkshopUrl>steam://url/CommunityFilePage/2062943477</steamWorkshopUrl>
+	</li>
+	</modDependencies>
+	<description>Rebalance power</description>
+	<loadAfter>
+		<li>vanillaexpanded.vfepower</li>
+	</loadAfter>
+</ModMetaData>
